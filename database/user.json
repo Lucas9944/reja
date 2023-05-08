@@ -1,0 +1,27 @@
+{
+  "name": "Steve",
+  "profession": "Software Engineer",
+  "age": 20,
+  "residence": "S.Korea",
+  "address": "Busan",
+  "languages": ["Uzbek", "Korean", "English"],
+  "skills": ["HTML", "CSS", "JS", "NodeJS", "PYTHON"],
+  "extra_skills": [
+    "Bootstrap, Materialize",
+    "Styling, Sass",
+    "Djamgo, Flask",
+    "GIT Knowledge"
+  ],
+  "work-place": "IT Company",
+  "service_desc": "Most of the senses of sight are concerned with seeing. A wonderful spectacle might be described as a sight, as might the general capacity to see anything (my sight is not as good as it once was). ",
+  "about_me": "Associating citation with cite, eyesight with sight, and situate with site may be helpful in applying these correctly",
+  "city": "Daegu",
+  "title": ["Flower", "Seedlings", "Garden", "Old", "New"],
+  "flower_desc": [
+    "IT Company Associating citation with cite, eyesight with sight, and situate with site may be helpful in applying these correctly"
+  ],
+  "flower_name": ["Tulib", "Daffodil"],
+  "flower_price": ["15$", "25$"],
+  "famous_word": ["Wolrd is beautiful with Flowers"],
+  "famous_name": ["Stive Jobs"]
+}
