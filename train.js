@@ -7,7 +7,7 @@ const list = [
   "siz kuchli bolgan narsalarni qiling", //40-50
   "yoshlarga investitsiya qiling", //50-60
   "endi dam oling, foydasi yoq endi", //50-60
-];
+];  
 
 // CALBACK function & async function
 async function maslahatBering(a, callback) {
