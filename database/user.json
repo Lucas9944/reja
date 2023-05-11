@@ -1,9 +1,9 @@
 {
-  "name": "Steve",
+  "name": "Lucas",
   "profession": "Software Engineer",
   "age": 20,
   "residence": "S.Korea",
-  "address": "Busan",
+  "address": "Seoul",
   "languages": ["Uzbek", "Korean", "English"],
   "skills": ["HTML", "CSS", "JS", "NodeJS", "PYTHON"],
   "extra_skills": [
