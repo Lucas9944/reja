@@ -4,16 +4,14 @@ const app = express();
 const http = require("http");
 const fs = require("fs");
 
-let user; 
+let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
-  if(err) {
+  if (err) {
     console.log("ERROR", err);
   } else {
-    user = JSON.parse(data)
+    user = JSON.parse(data);
   }
 });
-
-
 
 //1: Kirish code
 app.use(express.static("public"));
@@ -39,16 +37,18 @@ app.post("/create-item", (req, res) => {
   res.json({ test: "succes" });
 });
 
-app.get('/author', (req, res) => {
-  res.render("author", {user: user});
+app.get("/author", (req, res) => {
+  res.render("author", { user: user });
 });
 
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("reja");
 });
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function () {
-  console.log(`The server is runing successfully on port: ${PORT}`);
+  console.log(
+    `The server is runing successfully on port: ${PORT}, http://localhost:${PORT}`
+  );
 });
