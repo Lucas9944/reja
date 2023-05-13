@@ -4,7 +4,8 @@
   "age": 20,
   "residence": "S.Korea",
   "address": "Seoul",
-  "languages": ["Uzbek", "Korean", "English"],
+  "freelance": "Available",
+  "languages": ["Uzbek", "Korean", "English", "Russian"],
   "skills": ["HTML", "CSS", "JS", "NodeJS", "PYTHON"],
   "extra_skills": [
     "Bootstrap, Materialize",
