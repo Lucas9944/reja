@@ -10,7 +10,22 @@
 </head>
 
 <body style="background-color: #b8bbd1">
-    <!-- SHU YERDAN YOZASIZ -->
+    <div class="main-con">
+        <form id="create-form" action="create-item" method="POST">
+            <div>
+                <input name="reja" id="create-field" type="text">
+            </div>
+        </form>
+
+    </div>
+    <ul>
+        <li>
+            <span class="item-text"> <%=item.reja%></span>
+            <!-- <%= items[2].reja %> -->
+            <% items.map(function(item)  { %>
+        </li>
+        <% }) %>
+    </ul>
 </body>
 
 </html>

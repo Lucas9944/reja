@@ -1,9 +1,32 @@
 console.log("TRAIN AREA!");
 
 // D-TASK 
-// class Shop() {
+class Shop {
+    constructor(qoldiq, sotish, qabul){
+        this.qoldiq = qoldiq;
+        this.sotish = sotish;
+        this.qabul = qabul;
+    }
 
-// }
+    qoldiqniTekshiring(){
+        console.log(`Sotilgan tovar qoldigi ${this.qoldiq}`);
+    }
+
+    tovarniSoting() {
+        console.log(`shuncha tovar: ${this.sotish} sotildi!`);
+    }
+
+    tovarQabulqilish() {
+        console.log(`shuncha tovar: ${this.qabul} qabul qilindi!`);
+    }
+
+}
+
+const shop = new Shop(4, 5, 2);
+
+const dokon = new Shop('a / a', 5, 'qabul qilamiz');
+
+dokon.qoldiqniTekshiring();
 
 
 
