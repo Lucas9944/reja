@@ -1,40 +1,56 @@
 console.log("TRAIN AREA!");
 
-// D-TASK 
+// D-TASK
+
+const moment = require("moment");
+
+const now = moment().format("HH:mm");
+
 class Shop {
-    constructor(qoldiq, sotish, qabul){
-        this.qoldiq = qoldiq;
-        this.sotish = sotish;
-        this.qabul = qabul;
-    }
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+    this.now = now;
+  }
 
-    qoldiqniTekshiring(){
-        console.log(`Sotilgan tovar qoldigi ${this.qoldiq}`);
-    }
+  qoldiq() {
+    console.log(
+      `Hozir:${this.now}  ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud`
+    );
+  }
 
-    tovarniSoting() {
-        console.log(`shuncha tovar: ${this.sotish} sotildi!`);
+  sotish(mahsulot, soni) {
+    console.log(`Sotish ${soni} ta ${mahsulot}...`);
+    if (mahsulot === "non") {
+      this.non -= soni;
+    } else if (mahsulot === "lagmon") {
+      this.lagmon -= soni;
+    } else if (mahsulot === "cola") {
+      this.cola -= soni;
     }
+  }
 
-    tovarQabulqilish() {
-        console.log(`shuncha tovar: ${this.qabul} qabul qilindi!`);
+  qabul(mahsulot, soni) {
+    console.log(`Qabul ${soni} ta ${mahsulot}...`);
+    if (mahsulot === "non") {
+      this.non += soni;
+    } else if (mahsulot === "lagmon") {
+      this.lagmon += soni;
+    } else if (mahsulot === "cola") {
+      this.cola += soni;
     }
-
+  }
 }
 
-const shop = new Shop(4, 5, 2);
-
-const dokon = new Shop('a / a', 5, 'qabul qilamiz');
-
-dokon.qoldiqniTekshiring();
-
-
-
-
-
-
-
-
+const shop = new Shop(4, 5, 3);
+shop.qoldiq();
+shop.sotish("non", 5);
+shop.sotish("lagmon", 2);
+shop.qabul("non", 5)
+shop.qabul("cola", 5);
+shop.qabul("lagmon", 2);
+shop.qoldiq();
 
 // const list = [
 //   "yahshi talaba boling", // 0-20
@@ -43,7 +59,7 @@ dokon.qoldiqniTekshiring();
 //   "siz kuchli bolgan narsalarni qiling", //40-50
 //   "yoshlarga investitsiya qiling", //50-60
 //   "endi dam oling, foydasi yoq endi", //50-60
-// ];  
+// ];
 
 // // CALBACK function & async function
 // async function maslahatBering(a, callback) {
