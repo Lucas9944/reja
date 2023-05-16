@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-con{
+    background-color: brown;
+    height: 770px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.input-1{
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+}
+
+.submit-1 {
+    width: 60px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: chartreuse;
+    border:none;
+}

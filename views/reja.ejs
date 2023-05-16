@@ -5,27 +5,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REJA</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/create.css">
 </head>
 
-<body style="background-color: #b8bbd1">
-    <div class="main-con">
-        <form id="create-form" action="create-item" method="POST">
-            <div>
-                <input name="reja" id="create-field" type="text">
-            </div>
-        </form>
+<body style="background-color: #b8bbd1;">
+    <div class="container">
+        <h1>REJA VA MAQSADLAR</h1>
 
+        <div class="jumbotron p-3 shadow-sm">
+            <form action="/create-item" id="create-form" method="POST">
+                <div class="d-flex aligb-items-center">
+                    <input type="text" id="create-field" autofocus autocomplete="off" class="form-control mr-3"
+                        name="reja" style="flex: 1" />
+                    <button class="btn btn-primary" style="border-radius: 20px">
+                        Yangi Reja Qoshish</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- <%= items[28].reja %> -->
+        <ul id="item-list" class="list-group pb-5">
+            <% items.map(function(item) { %>
+                <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+                    <span class="item-text">
+                        <%=item.reja%>
+                    </span>
+                    <div>
+                        <button data-id="<%=item._id%>" class="edit-me btn btn-secondary btn-sm mr-1">
+                            Ozgartirish
+                        </button>
+                        <button data-id="<%=item._id%>" class="delete-me btn btn-danger btn-sm">Ochirish</button>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+
+        <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
+            Hamma Rejalarni O'chirish</button>
     </div>
-    <ul>
-        <li>
-            <span class="item-text"> <%=item.reja%></span>
-            <!-- <%= items[2].reja %> -->
-            <% items.map(function(item)  { %>
-        </li>
-        <% }) %>
-    </ul>
+
+
 </body>
 
 </html>
