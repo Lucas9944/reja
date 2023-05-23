@@ -1,20 +1,13 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
-const fs = require("fs");
+
 
 // MongoDB connect/ chaqirish
 const db = require("./server").db();
 const mongodb = require("mongodb");
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-  if (err) {
-    console.log("ERROR", err);
-  } else {
-    user = JSON.parse(data);
-  }
-});
+
 
 //1: Kirish code
 app.use(express.static("public"));
