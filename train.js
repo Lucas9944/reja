@@ -1,17 +1,50 @@
 console.log("TRAIN AREA!");
 
 function Musbatqaytarish(a) {
-  // a = 5;
-
-  if (a / a & a / 1) {
-    // a / a = true, a /1 = true
-    console.log("Natija: true! tub son");
+  if (a === 1) {
+    return true; 
+  } else if (a === 2) {
+    return true; 
   } else {
-    console.log("Natija: false! tub son emas");
+    for (let i = 2; i < a; i++) {
+      if (a % i === 0) {
+        return false; 
+      }
+    }
+    return true; 
   }
 }
 
-Musbatqaytarish(13);
+var natija = Musbatqaytarish(10);
+console.log("Natija:", natija);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Musbatqaytarish(a) {
+//   // a = 5;
+
+//   if (a / a & a / 1) {
+//     // a / a = true, a /1 = true
+//     console.log("Natija: true! tub son");
+//   } else {
+//     console.log("Natija: false! tub son emas");
+//   }
+// }
+
+// Musbatqaytarish(13);
 
 // D-TASK
 // const moment = require("moment");
