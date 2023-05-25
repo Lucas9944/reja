@@ -15,7 +15,7 @@ function Musbatqaytarish(a) {
   }
 }
 
-var natija = Musbatqaytarish(10);
+let natija = Musbatqaytarish(10);
 console.log("Natija:", natija);
 
 
